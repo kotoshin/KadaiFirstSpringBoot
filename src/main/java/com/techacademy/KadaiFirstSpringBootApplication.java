@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @SpringBootApplication
 public class KadaiFirstSpringBootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(KadaiFirstSpringBootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(KadaiFirstSpringBootApplication.class, args);
+    }
 
-	
 }

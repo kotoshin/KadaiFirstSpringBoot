@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class KadaiFirstController {
 
     @GetMapping("/dayofweek/{val1}")
-    public String index(@PathVariable String val1) {
+    public String dispDayOfWeek(@PathVariable String val1) {
         // 20240805
         String nen = val1.substring(0, 4);
         String tuki = val1.substring(4, 6);
@@ -52,8 +52,32 @@ public class KadaiFirstController {
             youbi = "Saturday";
             break;
         }
-
+        
         return youbi;
     }
-
+    @GetMapping("/plus/{val1}/{val2}")
+    public String calcPlus(@PathVariable double val1,@PathVariable double val2) {
+        double res = 0;
+        res = val1 + val2;
+        return "計算結果：" + res;
+    }
+    @GetMapping("/minus/{val1}/{val2}")
+    public String calcMinus(@PathVariable double val1,@PathVariable double val2) {
+        double res = 0;
+        res = val1 - val2;
+        return "計算結果：" + res;
+    }
+    @GetMapping("/times/{val1}/{val2}")
+    public String calcTimes(@PathVariable double val1,@PathVariable double val2) {
+        double res = 0;
+        res = val1 * val2;
+        return "計算結果：" + res;
 }
+    @GetMapping("/divide/{val1}/{val2}")
+    public String calcDivide(@PathVariable double val1,@PathVariable double val2) {
+        double res = 0;
+        res = val1 / val2;
+        return "計算結果：" + res;
+    }
+}
+
